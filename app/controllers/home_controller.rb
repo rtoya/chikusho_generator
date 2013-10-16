@@ -4,4 +4,12 @@ class HomeController < ApplicationController
 
   end
 
+  def adjust_photo
+
+  end
+
+  def show_gallery
+
+  end
+
 end

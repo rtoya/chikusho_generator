@@ -4,6 +4,8 @@ ChikushoGenerator::Application.routes.draw do
 
   get "home/index"
   get "home/select_flame"
+  get "home/adjust_photo"
+  get "home/show_gallery"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
