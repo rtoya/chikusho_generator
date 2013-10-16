@@ -5,15 +5,15 @@
   <p>使用するフレームを選択してください。</p>
 
   <div class="row">
-    <% CHIKUSHO_FLAME.each_with_index do |flame_img, index| %>
+    <% CHIKUSHO_FLAMES.each_with_index do |flame_img, index| %>
       <div class="col-md-3 thumb_col">
-        <%= link_to '#', class: "thumbnail flame_thumb #{'photo_bg_blk' if index % 3 == 1}" do %>
+        <%= link_to '#', id: "flame#{index}", class: "thumbnail flame_thumb #{'photo_bg_blk' if index % 3 == 1}" do %>
           <%= image_tag "#{flame_img}" %>
         <% end %>
       </div>
     <% end %>
     <div class="col-md-3 thumb_col">
-      <%= link_to '次に進む', home_adjust_photo_path, class: 'btn btn-success btn-lg' %>
+      <%= link_to '次に進む', home_adjust_photo_path, class: 'btn btn-success btn-lg next_btn', disabled: 'disabled' %>
     </div>
   </div>
 </div>

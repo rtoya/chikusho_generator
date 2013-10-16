@@ -21,6 +21,7 @@ header {
 .thumb_col {
   margin-bottom:30px;
   .flame_thumb { width:240px; }
-  .photo_bg_blk { background-color: black; }
-  .btn-success { float:right; margin-top:150px; }
+  .photo_bg_blk { background-color: #ccc; }
+  .next_btn { float:right; margin-top:150px; }
 }
+a.selected { outline:3px solid #3276b1; }
