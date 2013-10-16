@@ -10,10 +10,17 @@ body {
   }
 }
 header {
-    a.navbar-brand { background-image:url('/assets/shingeki_logo.png');
-      background-position:center;
-      background-repeat:no-repeat;
-      background-size:225px;
-      color:transparent !important;
-    }
+  a.navbar-brand { background-image:url('/assets/shingeki_logo.png');
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:225px;
+    color:transparent !important;
   }
+}
+
+.thumb_col {
+  margin-bottom:30px;
+  .flame_thumb { width:240px; }
+  .photo_bg_blk { background-color: black; }
+  .btn-success { float:right; margin-top:150px; }
+}
