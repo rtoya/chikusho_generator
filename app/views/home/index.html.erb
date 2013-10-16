@@ -1,5 +1,6 @@
 <div class="container" align="center">
   <div class="jumbotron">
+    <p><%= image_tag 'chikusho_logo.png', width: '240px' %></p>
     <h1>ちくしょう。ジェネレーター</h1>
     <p id="subtitle">あなたの好きな写真で<strong>「ちくしょう。転職だ！」</strong>バナー写真を作れます。</p>
     <p id="description">
@@ -9,7 +10,11 @@
     <%= link_to '写真をつくる', home_select_flame_path, class: 'btn btn-success btn-lg' %>
     <%= link_to '写真をみる', home_show_gallery_path, class: 'btn btn-info btn-lg' %>
 
-    <p class="banner_photo"><%= image_tag 'chikusho_top2.jpg' %></p>
+    <p class="banner_photo">
+      <%= link_to 'http://www.green-japan.com', target: '_blank' do %>
+        <%= image_tag 'chikusho_top2.jpg' %>
+      <% end %>
+    </p>
   </div>
 </div>
 <style>
