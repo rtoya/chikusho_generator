@@ -24,4 +24,8 @@ class HomeController < ApplicationController
     # 美女APIを叩いているので@photosは変更する
   end
 
+  def show_photo
+    #@photo = Hoge.find(params[:id])
+  end
+
 end

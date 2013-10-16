@@ -5,7 +5,7 @@ $(document).ready(function(){
     _self.addClass('selected');
     var flame_id = _self.attr("id").replace(/flame/g, '');
     var next_btn = $('a.next_btn');
-    next_btn.attr('href', '/home/adjust_photo?fid=' + flame_id);
+    next_btn.attr('href', '/adjust_photo?fid=' + flame_id);
     next_btn.removeAttr('disabled');
   });
 });
