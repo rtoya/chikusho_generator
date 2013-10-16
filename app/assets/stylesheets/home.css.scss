@@ -1,7 +1,18 @@
-body { padding-top: 70px; }
-header a.navbar-brand { background-image:url('/assets/shingeki_logo.png');
+body {
+  padding-top: 50px;
+  background-image:url('/assets/chikusho_top_bokashi.png');
+  .jumbotron {
+    h1 { margin-bottom:30px; }
+    p.banner_photo { margin-top:30px; }
+    .btn { margin-top:20px; }
+    .btn-success { margin-right:40px; }
+  }
+}
+header {
+    a.navbar-brand { background-image:url('/assets/shingeki_logo.png');
       background-position:center;
       background-repeat:no-repeat;
       background-size:225px;
       color:transparent !important;
-}
+    }
+  }
