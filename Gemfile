@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem 'rails', '4.0.0'
+gem 'mysql2'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
-
+#gem 'sqlite3'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -17,8 +16,10 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
+  gem 'uglifier'
 end
+
+#gem 'anjlab-bootstrap-rails', '~> 3.0.0.3', :require => 'bootstrap-rails'
 
 gem 'jquery-rails'
 gem 'rmagick', :require=>'RMagick'
@@ -37,3 +38,13 @@ gem 'rmagick', :require=>'RMagick'
 
 # To use debugger
 # gem 'debugger'
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-doc'
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
