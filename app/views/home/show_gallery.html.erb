@@ -3,4 +3,14 @@
     <h1>ちくしょうギャラリーを見る</h1>
   </div>
   <p>今までに公開された「ちくしょう写真」を公開しています。</p>
+
+  <div class="row">
+    <% @photos.each do |photo| %>
+      <div class="col-md-4">
+        <%= link_to '#', class: 'thumbnail' do %>
+          <%= image_tag "#{photo['thumb']}" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>

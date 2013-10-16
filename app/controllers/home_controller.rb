@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class HomeController < ApplicationController
 
   def adjust_photo
@@ -14,10 +16,12 @@ class HomeController < ApplicationController
   def download_photo
     send_file "#{Rails.root}/app/assets/images/aono.png", filename: 'aono.png', type: 'image/png'
 
-    # 動的なファイルの生成はsend_dataメソッドを使用。レシピブックp.78参照
+    # 動的なファイルの生成はsend_dataメソッドを使用。Railsレシピブックp.78参照
   end
 
   def show_gallery
+    @photos = ActiveSupport::JSON.decode(URI("http://bjin.me/api/?type=rand&count=50&format=json").read)
+    # 美女APIを叩いているので@photosは変更する
   end
 
 end
