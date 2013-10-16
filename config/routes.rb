@@ -7,6 +7,11 @@ ChikushoGenerator::Application.routes.draw do
   get "home/adjust_photo"
   get "home/show_gallery"
 
+  get "home/create_photo"
+  post "home/create_photo"
+
+  get "home/download_photo"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

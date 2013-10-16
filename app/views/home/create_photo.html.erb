@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="page-header">
+    <h1>写真が完成しました！&nbsp;<small>(Step 3/3)</small></h1>
+  </div>
+  <p>あなたのちくしょう写真が完成しました！画像の保存、SNSへの投稿が出来ます。</p>
+
+  <div class="row created_photo_area">
+    <div class="col-md-8" align="center">
+      <%= image_tag "aono.png", height: '360px' %>
+    </div>
+    <div class="col-md-4">
+      <h3>画像を保存</h3>
+      <p class="save_btn" align="center"><%= link_to "保存", home_download_photo_path, class: 'btn btn-default' %></p>
+      <h3>画像をSNSに投稿</h3>
+      <ul class="sns_share_list">
+        <li><%= link_to 'facebookに投稿', '#', class: 'btn btn-default' %></li>
+        <li><%= link_to 'twitterに投稿', '#', class: 'btn btn-default' %></li>
+        <li><%= link_to 'LINEに送る', '#', class: 'btn btn-default' %></li>
+      </ul>
+      <hr>
+      <p><%= link_to '別の写真を作成する', home_select_flame_path, class: 'btn btn-success btn-lg'%></p>
+    </div>
+  </div>
+</div>

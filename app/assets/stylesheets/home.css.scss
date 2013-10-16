@@ -25,3 +25,13 @@ header {
   .next_btn { float:right; margin-top:150px; }
 }
 a.selected { outline:3px solid #3276b1; }
+.created_photo_area {
+  border:#ddd 1px solid;
+  padding:20px 0;
+  .col-md-8 { border-right:#ddd 1px solid; }
+  .save_btn a { width:80%; }
+  .sns_share_list {
+    list-style:none;
+    li { margin-bottom:10px; }
+  }
+}
