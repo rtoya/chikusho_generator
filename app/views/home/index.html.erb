@@ -1,14 +1,17 @@
 <div class="container" align="center">
   <div class="jumbotron">
     <h1>ちくしょう。ジェネレーター</h1>
-    <p>あなたの好きな写真で<strong>「ちくしょう。転職だ！」</strong>バナー写真を作れます。</p>
-    <p>
+    <p id="subtitle">あなたの好きな写真で<strong>「ちくしょう。転職だ！」</strong>バナー写真を作れます。</p>
+    <p id="description">
       転職サイト「Green」の広告でお馴染みのフレーズ、「ちくしょう、転職だ！」。<br>
       そのフレーズとあなたの写真で「ちくしょう写真」を作ってみませんか？
     </p>
-    <%= link_to '写真をつくる', '#', class: 'btn btn-success btn-lg' %>
+    <%= link_to '写真をつくる', home_select_flame_path, class: 'btn btn-success btn-lg' %>
     <%= link_to '写真をみる', '#', class: 'btn btn-info btn-lg' %>
 
     <p class="banner_photo"><%= image_tag 'chikusho_top2.jpg' %></p>
   </div>
 </div>
+<style>
+body { background-image:url('/assets/chikusho_top_bokashi.png'); }
+</style>

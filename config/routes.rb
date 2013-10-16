@@ -1,7 +1,9 @@
 ChikushoGenerator::Application.routes.draw do
 
-  get "home/index"
   root :to => 'home#index'
+
+  get "home/index"
+  get "home/select_flame"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

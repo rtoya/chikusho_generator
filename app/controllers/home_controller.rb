@@ -1,4 +1,7 @@
 class HomeController < ApplicationController
-  def index
+
+  def select_flame
+
   end
+
 end
