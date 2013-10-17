@@ -3,7 +3,7 @@ class ImagesController < ApplicationController
 
   def upload
     @image = Image.new(image_params)
-    @image.random_hash = SecureRandom.hex[0, 9]
+    @image.random_hash = SecureRandom.hex[0, 20]
 
     if @image.save
       redirect_to "/adjust_photo/#{@image.random_hash}?id=#{@image.id}&fid=#{params[:flame_id]}"
