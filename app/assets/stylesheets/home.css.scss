@@ -34,3 +34,10 @@ a.selected { outline:3px solid #3276b1; }
   .col-md-8 { border-right:#ddd 1px solid; }
   .save_btn a { width:100%; }
 }
+.crop_area { border-right:#ddd 1px solid; }
+.preview_area {
+  margin-bottom:20px;
+  .preview_photo {
+    width:420px;height:350px;overflow:hidden;position:absolute;
+  }
+}
