@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131017143150) do
+ActiveRecord::Schema.define(version: 20131017161421) do
 
   create_table "images", force: true do |t|
-    t.boolean  "public_flg"
+    t.boolean  "public_flg",                          default: true
     t.string   "input_file_name"
     t.string   "input_content_type"
     t.integer  "input_file_size"
