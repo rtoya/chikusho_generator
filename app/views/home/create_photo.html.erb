@@ -7,7 +7,7 @@
 
     <div class="row created_photo_area">
       <div class="col-md-8" align="center">
-        <%= image_tag "aono.png", height: '360px' %>
+        <%= image_tag(get_output_path(@id), height: '360px') %>
       </div>
       <div class="col-md-4">
         <h3>画像を保存</h3>

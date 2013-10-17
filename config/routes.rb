@@ -10,6 +10,8 @@ ChikushoGenerator::Application.routes.draw do
   get "/download_photo" => "home#download_photo"
   get "/show_photo/:id" => "home#show_photo", :id => /\d+/
 
+  get "/images/get_output/:id" => "images#get_output", :id => /\d+/, as:'get_output'
+
   post "/images/upload" => "images#upload"
 
   # The priority is based upon order of creation:

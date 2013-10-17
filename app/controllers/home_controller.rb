@@ -18,7 +18,12 @@ class HomeController < ApplicationController
     flame = Magick::Image.read("#{Rails.root}/app/assets/images/#{CHIKUSHO_FLAMES[params[:flame_id].to_i]}").first
     result = resize_img.composite(flame, 0, 0, Magick::OverCompositeOp)
 
-    result.write("hoge.png")
+    original_image.output_data = result.to_blob
+    if original_image.save
+      @id = original_image.id
+      return @id
+    end
+#    result.write("hoge.png")
   end
 
   def download_photo
