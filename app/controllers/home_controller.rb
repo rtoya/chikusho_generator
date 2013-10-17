@@ -13,7 +13,7 @@ class HomeController < ApplicationController
 
   def create_photo
     original_image = Image.find(params[:photo_id])
-    org_img = Magick::Image.read("#{Rails.root}#{original_image.input.url}").first
+    org_img = Magick::Image.read("#{Rails.root}/public#{original_image.input.url}").first
     resize_img = org_img.crop(params[:coords_x].to_i, params[:coords_y].to_i, params[:coords_w].to_i, params[:coords_h].to_i).resize_to_fit(300, 250)
     flame = Magick::Image.read("#{Rails.root}/app/assets/images/#{CHIKUSHO_FLAMES[params[:flame_id].to_i]}").first
     result = resize_img.composite(flame, 0, 0, Magick::OverCompositeOp)

@@ -1,6 +1,5 @@
 class Image < ActiveRecord::Base
-  has_attached_file :input,
-    :url => '/tmp/:attachment/:id/:style/:filename'
+  has_attached_file :input
 
   paginates_per 30
 
