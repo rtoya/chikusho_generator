@@ -24,7 +24,7 @@ class HomeController < ApplicationController
   end
 
   def show_gallery
-    @photos = ActiveSupport::JSON.decode(URI("http://bjin.me/api/?type=rand&count=50&format=json").read)
+    @images = Image.is_public_ok
     # 美女APIを叩いているので@photosは変更する
   end
 

@@ -41,3 +41,20 @@ a.selected { outline:3px solid #3276b1; }
     width:420px;height:350px;overflow:hidden;position:absolute;
   }
 }
+
+ul.social-btns {
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+ul.social-btns li {
+  display:inline;
+  width:100px;
+  margin-left:-5px;
+  vertical-align: middle;
+}
+
+html#facebook {
+  vertical-align: middle;
+}

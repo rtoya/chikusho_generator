@@ -39,3 +39,18 @@ var showPreview = function(coords){
   $('#coords_x').val(coords.x * display_ratio);
   $('#coords_y').val(coords.y * display_ratio);
 }
+$(function() {
+  $('.tweet').socialbutton('twitter', {
+    button: 'horizontal',
+    text: 'ちくしょう。ジェネレーターで遊んでみた！'
+  });
+});
+$(function() {
+  $('.google_plusone').socialbutton('google_plusone');
+});
+$(function() {
+  $('.facebook_like').socialbutton('facebook_like', { button: 'button_count' });
+});
+$(function() {
+  $('.hatena').socialbutton('hatena');
+});
