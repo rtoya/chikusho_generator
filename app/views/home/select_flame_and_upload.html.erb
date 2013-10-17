@@ -15,7 +15,7 @@
       <% end %>
     </div>
 
-    <%= form_for @image, :url => { :controller => 'images', :action => 'upload'} do |f| %>
+    <%= form_for @image, url: images_upload_path do |f| %>
       <%= f.file_field :input %>
       <%= f.check_box :public_flg %>
       <%= f.submit %>

@@ -5,16 +5,12 @@ ChikushoGenerator::Application.routes.draw do
   get "/select_flame_and_upload" => "home#select_flame_and_upload"
   get "/adjust_photo" => "home#adjust_photo"
   get "/show_gallery" => "home#show_gallery"
-
   get "/create_photo" => "home#create_photo"
   post "/create_photo" => "home#create_photo"
-
   get "/download_photo" => "home#download_photo"
-
   get "/show_photo/:id" => "home#show_photo", :id => /\d+/
 
   post "/images/upload" => "images#upload"
-  get "/images/:id" => "images#show"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

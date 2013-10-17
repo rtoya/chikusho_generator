@@ -2,10 +2,6 @@ require 'open-uri'
 
 class HomeController < ApplicationController
 
-  def upload_photo
-
-  end
-
   def adjust_photo
     @image = Image.find(params[:id])
     # fidというパラメータでフレームの識別IDが飛んでくる
