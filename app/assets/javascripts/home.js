@@ -31,3 +31,18 @@ var showPreview = function(coords){
     marginTop: '-' + Math.round(ry * coords.y) + 'px'
   });
 }
+$(function() {
+  $('.tweet').socialbutton('twitter', {
+    button: 'horizontal',
+    text: 'ツイートに含むテキスト'
+  });
+});
+$(function() {
+  $('.google_plusone').socialbutton('google_plusone');
+});
+$(function() {
+  $('.facebook_like').socialbutton('facebook_like');
+});
+$(function() {
+  $('.hatena').socialbutton('hatena');
+});

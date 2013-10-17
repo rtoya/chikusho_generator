@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require jquery.Jcrop.min
+//= require jquery.socialbutton
 //= require_tree .
