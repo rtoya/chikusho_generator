@@ -5,7 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: mysql2
-  database: db/chikusho_generator_development
+  database: chikusho_generator_development
   host: localhost
   username: root
   reconnect: true
@@ -15,12 +15,14 @@ development:
 # Do not set this db to the same as development or production.
 test:
   adapter: mysql2
-  database: db/chikusho_generator_test
+  database: chikusho_generator_test
   host: localhost
   username: root
   reconnect: true
 
 production:
-  adapter: sqlite3
-  database: db/chikusho_generator_production
+  adapter: mysql2
+  database: chikusho_generator_production
+  host: localhost
+  username: root
   reconnect: true
