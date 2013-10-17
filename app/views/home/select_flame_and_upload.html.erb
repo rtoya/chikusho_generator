@@ -14,6 +14,13 @@
         </div>
       <% end %>
     </div>
+
+    <%= form_for @image, :url => { :controller => 'images', :action => 'upload'} do |f| %>
+      <%= f.file_field :input %>
+      <%= f.check_box :public_flg %>
+      <%= f.submit %>
+    <% end %>
+
     <div class="col-md-6">
       <div class="col-md-3 thumb_col">
         <%= link_to '次に進む', adjust_photo_path, class: 'btn btn-success btn-lg next_btn', disabled: 'disabled' %>
