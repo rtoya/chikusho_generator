@@ -2,6 +2,8 @@ class Image < ActiveRecord::Base
   has_attached_file :input
   has_attached_file :output
 
+  paginates_per 30
+
   validates :input_file_name, presence: true
   validates :input_content_type, presence: true
   validates :input_file_size, presence: true
