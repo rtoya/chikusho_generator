@@ -4,6 +4,7 @@ class HomeController < ApplicationController
 
   def adjust_photo
     @image = Image.find(params[:id])
+    redirect_to root_path unless @image.random_hash == params[:random_hash]
     # fidというパラメータでフレームの識別IDが飛んでくる
     # このIDは、CHIKUSHO_FLAMESという定数（配列）のインデックス
     # CHIKUSHO_FLAMES[params[:fid].to_i]

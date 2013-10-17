@@ -3,7 +3,7 @@ ChikushoGenerator::Application.routes.draw do
   root :to => 'home#index'
 
   get "/select_flame_and_upload" => "home#select_flame_and_upload"
-  get "/adjust_photo" => "home#adjust_photo"
+  get "/adjust_photo/:random_hash" => "home#adjust_photo", as: 'adjust_photo'
   get "/show_gallery" => "home#show_gallery"
   get "/create_photo" => "home#create_photo"
   post "/create_photo" => "home#create_photo"

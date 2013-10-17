@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131016190345) do
+ActiveRecord::Schema.define(version: 20131017034851) do
 
   create_table "images", force: true do |t|
     t.boolean  "public_flg"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20131016190345) do
     t.integer  "input_file_size"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "random_hash"
   end
 
 end
