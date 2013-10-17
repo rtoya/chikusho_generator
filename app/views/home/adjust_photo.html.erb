@@ -18,7 +18,14 @@
     </div>
   </div>
 
-  <p align="center">
-    <%= link_to '画像を作成する', create_photo_path, class: 'btn btn-success btn-lg' %>
-  </p>
+  <%= form_tag(create_photo_path) do %>
+    <%= hidden_field_tag :coords_w %>
+    <%= hidden_field_tag :coords_h %>
+    <%= hidden_field_tag :coords_x %>
+    <%= hidden_field_tag :coords_y %>
+    <%= hidden_field_tag :photo_id, @image.id %>
+    <%= hidden_field_tag :flame_id, params[:fid] %>
+
+    <p align="center"><%= submit_tag '画像を作成する', class: 'btn btn-success btn-lg' %></p>
+  <% end %>
 </div>

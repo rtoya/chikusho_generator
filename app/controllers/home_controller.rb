@@ -5,14 +5,16 @@ class HomeController < ApplicationController
   def adjust_photo
     @image = Image.find(params[:id])
     redirect_to root_path unless @image.random_hash == params[:random_hash]
-    # fidというパラメータでフレームの識別IDが飛んでくる
-    # このIDは、CHIKUSHO_FLAMESという定数（配列）のインデックス
-    # CHIKUSHO_FLAMES[params[:fid].to_i]
-    # => こんな感じでフレーム画像ファイル名が取り出せる
   end
 
   def create_photo
-    # 画像作成用のアクション
+    original_image = Image.find(params[:photo_id])
+    org_img = Magick::Image.read("#{Rails.root}/public#{original_image.input.url}").first
+    resize_img = org_img.crop(params[:coords_x].to_i, params[:coords_y].to_i, params[:coords_w].to_i, params[:coords_h].to_i).resize_to_fit(300, 250)
+    flame = Magick::Image.read("#{Rails.root}/app/assets/images/#{CHIKUSHO_FLAMES[params[:flame_id].to_i]}").first
+    result = resize_img.composite(flame, 0, 0, Magick::OverCompositeOp)
+
+    result.write("hoge.png")
   end
 
   def download_photo
