@@ -23,12 +23,13 @@ class HomeController < ApplicationController
       @random_hash = original_image.random_hash
       return @random_hash
     end
+  rescue
+    redirect_to select_flame_and_upload_path
   end
 
   def download_photo
-    send_file "#{Rails.root}/app/assets/images/aono.png", filename: 'aono.png', type: 'image/png'
-
-    # 動的なファイルの生成はsend_dataメソッドを使用。Railsレシピブックp.78参照
+    image = Image.find_by(random_hash: params[:random_hash])
+    send_data(image.output_data, type: 'image/png', filename: "#{image.input_file_name.split('.')[0]}_chikusho.png")
   end
 
   def show_gallery

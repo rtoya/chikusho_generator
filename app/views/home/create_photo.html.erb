@@ -11,7 +11,9 @@
       </div>
       <div class="col-md-4">
         <h3>画像を保存</h3>
-        <p class="save_btn" align="center"><%= link_to "保存", download_photo_path, class: 'btn btn-default' %></p>
+        <p class="save_btn" align="center">
+          <%= link_to "ダウンロードする", download_photo_path(@random_hash), class: 'btn btn-default' %>
+        </p>
         <h3>画像をSNSに投稿</h3>
         <%= link_to 'facebookに投稿', '#', class: 'btn btn-default btn-block' %>
         <%= link_to 'twitterに投稿', '#', class: 'btn btn-default btn-block' %>
