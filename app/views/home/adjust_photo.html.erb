@@ -2,7 +2,10 @@
   <div class="page-header">
     <h1>画像位置の調整&nbsp;<small>(Step 2/3)</small></h1>
   </div>
-  <p>写真をアップロードしてください。アップロードした写真のサイズ・位置を調整できます。<br>左の画像をドラッグすることで、表示したい領域を調整します。</p>
+  <p>
+    写真をアップロードしてください。アップロードした写真のサイズ・位置を調整できます。<br>
+    左の画像上でドラッグすることで、表示したい領域を調整します。
+  </p>
 
   <div class="row photo_adjust_area">
     <div class="col-md-6 crop_area">
@@ -18,7 +21,7 @@
     </div>
   </div>
 
-  <%= form_tag(create_photo_path) do %>
+  <%= form_tag create_photo_path, id: 'create_photo' do %>
     <%= hidden_field_tag :coords_w %>
     <%= hidden_field_tag :coords_h %>
     <%= hidden_field_tag :coords_x %>
@@ -26,6 +29,6 @@
     <%= hidden_field_tag :photo_id, @image.id %>
     <%= hidden_field_tag :flame_id, params[:fid] %>
 
-    <p align="center"><%= submit_tag '画像を作成する', class: 'btn btn-success btn-lg' %></p>
+    <p align="center"><%= submit_tag '画像を作成する', class: 'btn btn-success btn-lg', disabled: 'disabled' %></p>
   <% end %>
 </div>

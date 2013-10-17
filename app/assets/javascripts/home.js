@@ -33,11 +33,11 @@ var showPreview = function(coords){
 
   var photo_original_width = document.getElementById('jcrop_target').naturalWidth;
   var display_ratio = photo_original_width / photo_display_width;
-
   $('#coords_w').val(coords.w * display_ratio);
   $('#coords_h').val(coords.h * display_ratio);
   $('#coords_x').val(coords.x * display_ratio);
   $('#coords_y').val(coords.y * display_ratio);
+  $('#create_photo').find("input[type='submit']").removeAttr('disabled');
 }
 $(function() {
   $('.tweet').socialbutton('twitter', {

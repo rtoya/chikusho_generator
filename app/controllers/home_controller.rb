@@ -2,6 +2,10 @@ require 'open-uri'
 
 class HomeController < ApplicationController
 
+  def select_flame_and_upload
+    @image = Image.new
+  end
+
   def adjust_photo
     @image = Image.find(params[:id])
     redirect_to root_path unless @image.random_hash == params[:random_hash]
@@ -25,15 +29,10 @@ class HomeController < ApplicationController
 
   def show_gallery
     @images = Image.is_public_ok
-    # 美女APIを叩いているので@photosは変更する
   end
 
   def show_photo
     #@photo = Hoge.find(params[:id])
-  end
-
-  def select_flame_and_upload
-    @image = Image.new
   end
 
 end
