@@ -54,15 +54,14 @@ ul.social-btns {
   list-style:none;
   padding:0;
   margin:0;
+  li {
+    display:inline;
+    width:100px;
+    margin-left:-5px;
+    vertical-align: middle;
+    .google_plusone > div { vertical-align:text-top !important; }
+  }
 }
-
-ul.social-btns li {
-  display:inline;
-  width:100px;
-  margin-left:-5px;
-  vertical-align: middle;
-}
-
-html#facebook {
-  vertical-align: middle;
+li.facebook_like {
+  iframe { vertical-align:text-top; }
 }
