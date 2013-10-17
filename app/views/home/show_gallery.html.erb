@@ -5,10 +5,10 @@
   <p>今までに公開された「ちくしょう写真」を公開しています。</p>
 
   <div class="row">
-    <% @photos.each do |photo| %>
+    <% @images.each do |image| %>
       <div class="col-md-4">
         <%= link_to '#', class: 'thumbnail' do %>
-          <%= image_tag "#{photo['thumb']}" %>
+          <%= image_tag image.output.url %>
         <% end %>
       </div>
     <% end %>

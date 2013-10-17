@@ -6,9 +6,8 @@ class ImagesController < ApplicationController
     @image.random_hash = SecureRandom.hex[0, 9]
 
     if @image.save
-      redirect_to "/adjust_photo/#{@image.random_hash}?id=#{@image.id}"
+      redirect_to "/adjust_photo/#{@image.random_hash}?id=#{@image.id}&?fid=#{@fid}"
     else
-      #render text: 'ファイルが対応していません'
       flash[:error] = "写真がアップロードされていない、もしくはファイルの種類・サイズが不正です"
       render '/home/select_flame_and_upload'
     end
