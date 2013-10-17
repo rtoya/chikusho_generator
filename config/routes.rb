@@ -10,7 +10,7 @@ ChikushoGenerator::Application.routes.draw do
   get "/download_photo" => "home#download_photo"
   get "/show_photo/:random_hash" => "home#show_photo", as:'show_photo'
 
-  get "/images/get_output/:id" => "images#get_output", as:'get_output'
+  get "/images/get_output/:random_hash" => "images#get_output", as:'get_output'
 
   post "/images/upload" => "images#upload"
 

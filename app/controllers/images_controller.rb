@@ -15,7 +15,7 @@ class ImagesController < ApplicationController
   end
 
   def get_output
-    @image = Image.find(params[:id])
+    @image = Image.find_by(random_hash:params[:random_hash])
     send_data(@image.output_data, :disposition => "inline", :type => "image/png")
   end
 
