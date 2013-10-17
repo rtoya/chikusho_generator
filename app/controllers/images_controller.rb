@@ -7,7 +7,7 @@ class ImagesController < ApplicationController
     if @image.save
       redirect_to adjust_photo_path(id: @image.id)
     else
-      render action: 'new'
+      render text: 'ファイルが対応していません'
     end
   end
 
