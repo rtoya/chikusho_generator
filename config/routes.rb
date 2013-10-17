@@ -2,7 +2,7 @@ ChikushoGenerator::Application.routes.draw do
 
   root :to => 'home#index'
 
-  get "/select_flame" => "home#select_flame"
+  get "/select_flame_and_upload" => "home#select_flame_and_upload"
   get "/adjust_photo" => "home#adjust_photo"
   get "/show_gallery" => "home#show_gallery"
 
