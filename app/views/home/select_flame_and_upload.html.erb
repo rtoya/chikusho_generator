@@ -5,7 +5,7 @@
   <p>使用するフレームを選択してください。</p>
 
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 flame_select_area">
       <% CHIKUSHO_FLAMES.each_with_index do |flame_img, index| %>
         <div class="col-md-4 thumb_col">
           <%= link_to '#', id: "flame#{index}", class: "thumbnail flame_thumb #{'photo_bg_blk' if index % 3 == 1}" do %>
@@ -16,7 +16,7 @@
     </div>
 
     <%= form_for @image, url: images_upload_path do |f| %>
-      <div class="col-md-3 thumb_col clearfix">
+      <div class="col-md-3 thumb_col photo_upload_area clearfix">
         <%= f.file_field :input %>
         <label><%= f.check_box :public_flg %>この写真を公開する</label>
 
