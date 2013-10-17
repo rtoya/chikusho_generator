@@ -34,14 +34,14 @@ var showPreview = function(coords){
 $(function() {
   $('.tweet').socialbutton('twitter', {
     button: 'horizontal',
-    text: 'ツイートに含むテキスト'
+    text: 'ちくしょう。ジェネレーターで遊んでみた！'
   });
 });
 $(function() {
   $('.google_plusone').socialbutton('google_plusone');
 });
 $(function() {
-  $('.facebook_like').socialbutton('facebook_like');
+  $('.facebook_like').socialbutton('facebook_like', { button: 'button_count' });
 });
 $(function() {
   $('.hatena').socialbutton('hatena');
