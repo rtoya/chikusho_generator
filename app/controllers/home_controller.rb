@@ -37,8 +37,7 @@ class HomeController < ApplicationController
   end
 
   def show_photo
-    image = Image.find(params[:random_hash])
-    @image_id = image.id
+    @image = Image.find(params[:id])
   end
 
 end

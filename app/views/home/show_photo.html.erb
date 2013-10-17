@@ -5,7 +5,7 @@
     <p id="subtitle">あなたの好きな写真で<strong>「ちくしょう。転職だ！」</strong>バナー写真を作れます。</p>
 
     <!-- ここに写真を表示 -->
-    <p align="center"><%= image_tag(get_output_path(@image_id), height: '300px') %></p>
+    <p align="center"><%= image_tag(get_output_path(@image.id), height: '300px') %></p>
 
     <%= link_to '写真をつくる', select_flame_and_upload_path, class: 'btn btn-success btn-lg' %>
     <%= link_to '他の写真をみる', show_gallery_path, class: 'btn btn-info btn-lg' %></br>
