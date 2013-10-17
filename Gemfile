@@ -38,6 +38,8 @@ gem 'paperclip'
 # To use debugger
 # gem 'debugger'
 
+gem 'kaminari'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-doc'
