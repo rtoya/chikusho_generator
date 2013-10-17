@@ -1,5 +1,6 @@
 class Image < ActiveRecord::Base
   has_attached_file :input
+  has_attached_file :output
 
   validates :input_file_name, presence: true
   validates :input_content_type, presence: true
@@ -8,4 +9,7 @@ class Image < ActiveRecord::Base
 
 #  validates_attachment_size :input, :less_than => 1.megabytes
 #  validates_attachment_content_type :input, :content_type => ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
+
+  scope :is_public,-> { where(public_flg:true)}
+
 end

@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131017034851) do
+ActiveRecord::Schema.define(version: 20131017070501) do
+
+  create_table "attachments", force: true do |t|
+    t.string   "title"
+    t.text     "path"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "images", force: true do |t|
     t.boolean  "public_flg"
@@ -21,6 +28,10 @@ ActiveRecord::Schema.define(version: 20131017034851) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "random_hash"
+    t.integer  "flame_id"
+    t.string   "output_file_name"
+    t.string   "output_content_type"
+    t.integer  "output_file_size"
   end
 
 end
