@@ -24,7 +24,7 @@
         <div class="col-md-5 thumb_col photo_upload_area clearfix">
           <p>写真をアップロードしてください。</p>
           <%= f.file_field :input %>
-          <label><%= f.check_box :public_flg %>この写真をギャラリーに公開する</label>
+          <label><%= f.check_box :public_flg %>&nbsp;この写真をギャラリーに公開する</label>
           <%= hidden_field_tag :flame_id %>
 
           <%= f.submit '次に進む', class: 'btn btn-success btn-lg next_btn', disabled: 'disabled' %>

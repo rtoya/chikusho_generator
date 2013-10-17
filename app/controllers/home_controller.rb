@@ -23,7 +23,6 @@ class HomeController < ApplicationController
       @id = original_image.id
       return @id
     end
-#    result.write("hoge.png")
   end
 
   def download_photo
