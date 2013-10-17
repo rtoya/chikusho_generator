@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   end
 
   def adjust_photo
+    @image = Image.find(params[:id])
     # fidというパラメータでフレームの識別IDが飛んでくる
     # このIDは、CHIKUSHO_FLAMESという定数（配列）のインデックス
     # CHIKUSHO_FLAMES[params[:fid].to_i]
@@ -30,6 +31,10 @@ class HomeController < ApplicationController
 
   def show_photo
     #@photo = Hoge.find(params[:id])
+  end
+
+  def select_flame_and_upload
+    @image = Image.new
   end
 
 end
