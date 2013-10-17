@@ -2,6 +2,10 @@ require 'open-uri'
 
 class HomeController < ApplicationController
 
+  def upload_photo
+
+  end
+
   def adjust_photo
     # fidというパラメータでフレームの識別IDが飛んでくる
     # このIDは、CHIKUSHO_FLAMESという定数（配列）のインデックス
