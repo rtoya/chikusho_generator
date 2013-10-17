@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  public_flg: false
+  input_file_name: MyString
+  input_content_type: MyString
+  input_file_size: 1
+
+two:
+  public_flg: false
+  input_file_name: MyString
+  input_content_type: MyString
+  input_file_size: 1
