@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131017124838) do
+ActiveRecord::Schema.define(version: 20131017143150) do
 
   create_table "images", force: true do |t|
     t.boolean  "public_flg"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20131017124838) do
     t.datetime "updated_at"
     t.string   "random_hash"
     t.integer  "flame_id"
-    t.binary   "output_data"
+    t.binary   "output_data",        limit: 16777215
   end
 
 end
