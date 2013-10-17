@@ -1,4 +1,5 @@
 body {
+  background-image:url('/assets/chikusho_top_bokashi.png');
   padding-top: 50px;
   .jumbotron {
     margin-top:20px;
@@ -6,8 +7,12 @@ body {
     h1 { margin-bottom:30px; font-size:24px;}
     p#description { margin-top:30px; }
     p.banner_photo { margin-top:30px; }
-    .btn { margin-top:20px; }
-    .btn-success { margin-right:40px; }
+    .create_photo_btn, .show_gallery_btn { margin-top:20px; }
+    .create_photo_btn { margin-right:40px; }
+    #image_input { font-size:13px; }
+    #create_photo {
+      p { margin-top:10px; }
+    }
   }
 }
 header {
@@ -19,7 +24,10 @@ header {
   }
 }
 .flame_select_area { border-right:#ddd 1px solid; }
-.photo_upload_area { margin-left:20px; }
+.photo_upload_area {
+  margin-left:20px;
+  label { font-size:14px; }
+}
 .thumb_col {
   margin-bottom:30px;
   .flame_thumb { width:240px; }
