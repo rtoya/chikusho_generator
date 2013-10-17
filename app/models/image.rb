@@ -9,8 +9,8 @@ class Image < ActiveRecord::Base
   validates :input_file_size, presence: true
   validates :random_hash, presence: true
 
-  scope :is_public_ok, ->{where(public_flg:true)}
+  scope :is_public_ok, ->{ where(public_flg:true) }
 
-#  validates_attachment_size :input, :less_than => 1.megabytes
-#  validates_attachment_content_type :input, :content_type => ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
+  validates_attachment_size :input, :less_than => 5.megabytes
+  validates_attachment_content_type :input, :content_type => ['image/jpeg', 'image/jpg', 'image/png', 'image/gif']
 end
