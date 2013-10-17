@@ -8,8 +8,8 @@
     <div class="row">
       <% @images.each do |image| %>
         <div class="col-md-4">
-          <%= link_to '#', class: 'thumbnail' do %>
-            <%= image_tag image.output.url %>
+          <%= link_to show_photo_path(image.random_hash), class: 'thumbnail' do %>
+            <%= image_tag(get_output_path(image.id), height: '150px') %>
           <% end %>
         </div>
       <% end %>
