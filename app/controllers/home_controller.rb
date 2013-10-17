@@ -20,8 +20,8 @@ class HomeController < ApplicationController
 
     original_image.output_data = result.to_blob
     if original_image.save
-      @id = original_image.id
-      return @id
+      @image_id = original_image.random_hash
+      return @image_id
     end
   end
 
@@ -32,11 +32,11 @@ class HomeController < ApplicationController
   end
 
   def show_gallery
-    @images = Image.is_public_ok
+    @images = Image.is_public_ok.select('id', 'random_hash')
   end
 
   def show_photo
-    #@photo = Hoge.find(params[:id])
+    @image = Image.find(params[:id])
   end
 
 end
