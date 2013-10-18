@@ -33,7 +33,7 @@ class HomeController < ApplicationController
   end
 
   def show_gallery
-    @images = Image.is_public_ok.select('random_hash').page(params[:page])
+    @images = Image.is_public_ok.have_output.select('random_hash').page(params[:page])
   end
 
   def show_photo
